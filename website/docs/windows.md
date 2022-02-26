@@ -51,6 +51,19 @@ Some of the above config is more verbose than I had expected, it appears as thou
 is ignored, but other than that, this works for me and allows my verdaccio instance to
 persist between restarts of the server, and also restart itself should there be any crashes of the verdaccio process.
 
+## Using qckwinsvc2 {#qckwinsvc2}
+
+1. Create a directory for verdaccio
+    * mkdir `c:\verdaccio`
+    * cd `c:\verdaccio`
+2. Install verdaccio locally (you will need to install it locally to access the cli.js file)
+    * npm install verdaccio
+3. Create your `config.yaml` file in this location `(c:\verdaccio\config.yaml)`
+4. Install qckwinsvc2 global 
+   * npm i qckwinsvc2 -g
+5. qckwinsvc2 install name="Verdaccio" description="Verdaccio Private Registry" path="c:\verdaccio\node_modules\verdaccio\src\lib\cli.js" now
+6. Wait for the service to be created.
+7. restart system.
 
 ## Repositories {#repositories}
 
